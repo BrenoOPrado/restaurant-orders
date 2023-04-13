@@ -57,6 +57,7 @@ class Ingredient:
         return hash(self.name)
 
     def __eq__(self, other: object) -> bool:
+        print(repr(self), ' é igual a ', repr(other))
         return repr(self) == repr(other)
 
     def __repr__(self) -> str:
