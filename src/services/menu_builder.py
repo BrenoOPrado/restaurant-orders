@@ -30,9 +30,6 @@ class MenuBuilder:
 
         for item in self.menu_data.dishes:
             has_stock = self.inventory.check_recipe_availability(item.recipe)
-            print('------------')
-            print(has_stock)
-            print('------------')
             if restriction not in item.get_restrictions() and has_stock:
                 res.append({
                     "dish_name": item.name,
